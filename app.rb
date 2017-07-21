@@ -14,3 +14,7 @@ end
 get '/blog' do
   erb :blog
 end
+
+get '/contact' do
+  erb :contact
+end
