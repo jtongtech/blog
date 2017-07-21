@@ -1,0 +1,64 @@
+<style>
+H1 {
+    font-size: 4vw;
+    text-align: center;
+    font-weight: 100;
+    padding-top: 3vh;
+}
+.color {
+    background: #445aaf;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #445aaf;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #FFD444;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #B28C0C;
+    color: white;
+}
+</style>
+<div class="color">
+<H1>Coding in Clendenin</H1>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Coding in Clendenin</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+<div class="topnav" id="myTopnav">
+    <a href="/">Home</a>
+    <a href="/resume">Resume</a>
+    <a href="/blog">Blog</a>
+    <a href="#">Contact</a>
+    <a href="https://github.com/jtongtech">Github</a>
+</div>
+<hr>
+</div>
+<br>
+<%=yield%>
