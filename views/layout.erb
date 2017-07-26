@@ -1,9 +1,57 @@
 <style>
-H1 {
-    font-size: 4vw;
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    background-color: #445aaf;
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+    background-color: #445aaf;
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    background-color: #445aaf;
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    H1 {
+    font-size: 5vw;
     text-align: center;
     font-weight: 100;
-    padding-top: 3vh;
+    padding-top: 2vh;
 }
 .color {
     background: #445aaf;
@@ -20,9 +68,9 @@ H1 {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 2vh 1vw;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 2vh;
 }
 
 /* Change the color of links on hover */
@@ -39,6 +87,64 @@ H1 {
 hr {
     margin-bottom: -2em;
 }
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    background-color: #445aaf;
+/* Styles */
+}
+
+
+<%# H1 {
+    font-size: 5vw;
+    text-align: center;
+    font-weight: 100;
+    padding-top: 2vh;
+}
+.color {
+    background: #445aaf;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #445aaf;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2vh 1vw;
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #FFD444;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #B28C0C;
+    color: white;
+}
+hr {
+    margin-bottom: -2em;
+} %>
 </style>
 <div class="color">
 <H1>Coding in Clendenin</H1>
