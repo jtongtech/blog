@@ -3,21 +3,18 @@
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-    background-color: #445aaf;
 /* Styles */
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 321px) {
-    background-color: #445aaf;
 /* Styles */
 }
 
 /* Smartphones (portrait) ----------- */
 @media only screen 
 and (max-width : 320px) {
-    background-color: #445aaf;
 /* Styles */
 }
 
@@ -33,6 +30,10 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
+    .topnav a {
+    padding: 2vh 1vw;
+    font-size: 2vh;
+}
 /* Styles */
 }
 
@@ -49,41 +50,22 @@ and (orientation : portrait) {
 and (min-width : 1224px) {
     H1 {
     font-size: 5vw;
-    text-align: center;
     font-weight: 100;
     padding-top: 2vh;
 }
-.color {
-    background: #445aaf;
-}
 /* Add a black background color to the top navigation */
-.topnav {
-    background-color: #445aaf;
-    overflow: hidden;
-}
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
     padding: 2vh 1vw;
-    text-decoration: none;
     font-size: 2vh;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #FFD444;
-    color: black;
-}
+
 
 /* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #B28C0C;
-    color: white;
-}
 hr {
     margin-bottom: -2em;
 }
@@ -100,10 +82,53 @@ and (min-width : 1824px) {
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
-    background-color: #445aaf;
+    .topnav a {
+    padding: 2vh 1vw;
+    font-size: 3vw;
+}
 /* Styles */
 }
+hr {
+    -webkit-margin-after: -3vh;
+}
+ .color {
+    background: #445aaf;
+} 
+.topnav {
+    background-color: #445aaf;
+    overflow: hidden;
+}
+H1 {
+    font-size: 5vw;
+    text-align: center;
+    font-weight: 100;
+    padding-top: 2vh;
+}
+.topnav {
+    background-color: #445aaf;
+    overflow: hidden;
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #FFD444;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #B28C0C;
+    color: white;
+}
 
 <%# H1 {
     font-size: 5vw;
@@ -111,9 +136,9 @@ only screen and (min-device-pixel-ratio : 1.5) {
     font-weight: 100;
     padding-top: 2vh;
 }
-.color {
+ .color {
     background: #445aaf;
-}
+} 
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #445aaf;
