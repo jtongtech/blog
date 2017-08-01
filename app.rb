@@ -22,3 +22,7 @@ end
 get '/projects' do
   erb :projects
 end
+
+get '/icc' do
+  erb :icc
+end
