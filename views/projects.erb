@@ -1,90 +1,88 @@
 <style>
 body {
-  text-align: center;
-  padding: 2em 0;
-  background: #222;
-}
+    text-align: center;
+    padding: 2em 0;
+    background: #222;
+  }
 
-h1,
-h2,
-.tag {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: sans-serif;
-}
+  h1,
+  h2,
+  .tag {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
 
-h1 {
-  font-size: 2.5rem;
-  color: #5cd9fd;
-  margin-bottom: 0.25em;
-  line-height: 1em;
-}
+  h1 {
+    font-size: 2.5rem;
+    color: #5cd9fd;
+    margin-bottom: 0.25em;
+    line-height: 1em;
+  }
 
-h2 {
-  color: #fff;
-  transition: 0.3s;
-}
+  h2 {
+    color: #fff;
+    transition: 0.3s;
+  }
 
-.tag {
-  font-size: 1.3rem;
-  color: #eee;
-  font-weight: normal;
-  margin: 0 0 3em;
-}
+  .tag {
+    font-size: 1.3rem;
+    color: #eee;
+    font-weight: normal;
+    margin: 0 0 3em;
+  }
 
-.projContainer {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: -5px;
-  overflow: hidden;
-  position: relative;
-  vertical-align: top;
-  width: 340px;
-  height: 228px;
-  cursor: pointer;
-}
+  .projContainer {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -5px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 340px;
+    height: 228px;
+    cursor: pointer;
+  }
 
-.projContainer img {
-transition: 0.3s;
-}
+  .projContainer img {
+    transition: 0.3s;
+  }
 
-.projContainer:hover img {
- transform: scale(1.2);
- -webkit-transform: scale(1.2);
-}
+  .projContainer:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
 
-.projContainer:hover h2 {
+  .projContainer:hover h2 {
     padding-top: 10%;
-}
+  }
 
-.projInfoContainer {
-  position: absolute;
-  background: rgba(5,5,5,0.8);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  opacity: 0;
-  transition: 0.2s;
-}
+  .projInfoContainer {
+    position: absolute;
+    background: rgba(5, 5, 5, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.2s;
+  }
 
-.projContainer:hover .projInfoContainer {
-  opacity: 1;
-}
+  .projContainer:hover .projInfoContainer {
+    opacity: 1;
+  }
 
-.projCat {
-  color: #5cd9fd;
-  font-weight: bold;
-}
+  .projCat {
+    color: #5cd9fd;
+    font-weight: bold;
+  }
 
-.projSpec {
- color: #aaa;
- font-family: sans-serif;
+  .projSpec {
+    color: #aaa;
+    font-family: sans-serif;
+  }
 }
-}
-
-
 </style>
 
 
@@ -93,14 +91,15 @@ transition: 0.3s;
 <p class="tag">These are some of the projects I have worked on over my time as a Software Developer.</p>
 
 <a href="icc">
-<div class="projContainer" >
-  <div class="projInfoContainer">
-    <h2>High Speed Internet Coalition</h2>
-    <p class="projCat">Single Page Web App</p>
-    <p class="projSpec">This project was to create a website that tested and report residential speeds.<br /></p>
+  <div class="projContainer">
+    <div class="projInfoContainer">
+      <h2>High Speed Internet Coalition</h2>
+      <p class="projCat">Single Page Web App</p>
+      <p class="projSpec">This project was to create a website that tested and report residential speeds.<br /></p>
+    </div>
+    <img src="img/icc.gif" />
   </div>
-  <img src="img/icc.gif" />
-</div></a>
+</a>
 
 <div class="projContainer">
   <div class="projInfoContainer">
@@ -108,7 +107,8 @@ transition: 0.3s;
     <p class="projCat">Category</p>
     <p class="projSpec">Stuff about this project.<br />More stuff about it, too</p>
   </div>
-  <img src="http://www.terrancejrogers.com/sites/default/files/styles/project_thumb/public/projects/main-images/zelda-minimalistic_0.jpg?itok=DXL56_l4" />
+  <img src="http://www.terrancejrogers.com/sites/default/files/styles/project_thumb/public/projects/main-images/zelda-minimalistic_0.jpg?itok=DXL56_l4"
+  />
 </div>
 
 <div class="projContainer">
@@ -117,7 +117,8 @@ transition: 0.3s;
     <p class="projCat">Category</p>
     <p class="projSpec">Stuff about this project.<br />More stuff about it, too</p>
   </div>
-  <img src="http://www.terrancejrogers.com/sites/default/files/styles/project_thumb/public/projects/main-images/spidey-hanging.jpg?itok=-jBh-we8" />
+  <img src="http://www.terrancejrogers.com/sites/default/files/styles/project_thumb/public/projects/main-images/spidey-hanging.jpg?itok=-jBh-we8"
+  />
 </div>
 
 <div class="projContainer">
@@ -126,5 +127,6 @@ transition: 0.3s;
     <p class="projCat">Category</p>
     <p class="projSpec">Stuff about this project.<br />More stuff about it, too</p>
   </div>
-  <img src="http://www.terrancejrogers.com/sites/default/files/styles/project_thumb/public/projects/main-images/hunger-games-minimalistic_0.jpg?itok=Y6mhNwmN" />
+  <img src="http://www.terrancejrogers.com/sites/default/files/styles/project_thumb/public/projects/main-images/hunger-games-minimalistic_0.jpg?itok=Y6mhNwmN"
+  />
 </div>

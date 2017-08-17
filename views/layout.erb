@@ -89,7 +89,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
 hr {
-    -webkit-margin-after: -3vh;
+    margin-top: 0vh;
 }
  .color {
     background: #445aaf;
@@ -97,16 +97,20 @@ hr {
 .topnav {
     background-color: #445aaf;
     overflow: hidden;
+    width: 100%;
 }
 H1 {
+    
     font-size: 5vw;
     text-align: center;
     font-weight: 100;
-    padding-top: 2vh;
+    margin-top: 2.5vw;
+    margin-bottom: 0.5vw;
 }
 .topnav {
     background-color: #445aaf;
     overflow: hidden;
+    float: right;
 }
 
 /* Style the links inside the navigation bar */
@@ -172,7 +176,6 @@ hr {
 } %>
 </style>
 <div class="color">
-<H1>Coding in Clendenin</H1>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -193,6 +196,6 @@ hr {
     <a href="https://github.com/jtongtech">Github</a>
     <a href="/">Projects</a>
 </div>
-<hr>
 </div>
+<hr>
 <%=yield%>

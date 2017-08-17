@@ -31,7 +31,9 @@
     //Will choke on undefined navigator and window vars when run on server
     //Return boolean false and exit function when running server-side
 
-    if (typeof window === "undefined" || typeof navigator === "undefined") { return false; }
+    if (typeof window === "undefined" || typeof navigator === "undefined") {
+        return false;
+    }
 
     var pdfobjectversion = "2.0.201604172",
         supportsPDFs,
@@ -47,7 +49,9 @@
         embed,
         getTargetElement,
         generatePDFJSiframe,
-        isIOS = (function() { return (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase())); })(),
+        isIOS = (function() {
+            return (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()));
+        })(),
         generateEmbedElement;
 
 
@@ -71,11 +75,15 @@
     //so check the first one for older IE, and the second for IE11
     //FWIW, MS Edge (replacing IE11) does not support ActiveX at all, both will evaluate false
     //Constructed as a method (not a prop) to avoid unneccesarry overhead -- will only be evaluated if needed
-    isIE = function() { return !!(window.ActiveXObject || "ActiveXObject" in window); };
+    isIE = function() {
+        return !!(window.ActiveXObject || "ActiveXObject" in window);
+    };
 
     //If either ActiveX support for "AcroPDF.PDF" or "PDF.PdfCtrl" are found, return true
     //Constructed as a method (not a prop) to avoid unneccesarry overhead -- will only be evaluated if needed
-    supportsPdfActiveX = function() { return !!(createAXO("AcroPDF.PDF") || createAXO("PDF.PdfCtrl")); };
+    supportsPdfActiveX = function() {
+        return !!(createAXO("AcroPDF.PDF") || createAXO("PDF.PdfCtrl"));
+    };
 
     //Determines whether PDF support is available
     supportsPDFs = (supportsPdfMimeType || (isIE() && supportsPdfActiveX()));
@@ -183,7 +191,9 @@
     embed = function(url, targetSelector, options) {
 
         //Ensure URL is available. If not, exit now.
-        if (typeof url !== "string") { return embedError("URL is not valid"); }
+        if (typeof url !== "string") {
+            return embedError("URL is not valid");
+        }
 
         //If targetSelector is not defined, convert to boolean
         targetSelector = (typeof targetSelector !== "undefined") ? targetSelector : false;
@@ -206,7 +216,9 @@
             fallbackHTML_default = "<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href='[url]'>Download PDF</a></p>";
 
         //If target element is specified but is not valid, exit without doing anything
-        if (!targetNode) { return embedError("Target element cannot be determined"); }
+        if (!targetNode) {
+            return embedError("Target element cannot be determined");
+        }
 
 
         //page option overrides pdfOpenParams, if found
@@ -246,9 +258,15 @@
     };
 
     return {
-        embed: function(a, b, c) { return embed(a, b, c); },
-        pdfobjectversion: (function() { return pdfobjectversion; })(),
-        supportsPDFs: (function() { return supportsPDFs; })()
+        embed: function(a, b, c) {
+            return embed(a, b, c);
+        },
+        pdfobjectversion: (function() {
+            return pdfobjectversion;
+        })(),
+        supportsPDFs: (function() {
+            return supportsPDFs;
+        })()
     };
 
 }));
