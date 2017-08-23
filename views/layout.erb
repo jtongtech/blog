@@ -111,8 +111,6 @@ H1 {
     background-color: #445aaf;
     overflow: hidden;
     float: right;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -140,46 +138,10 @@ H1 {
     color: white;
 }
 
-<%# H1 {
-    font-size: 5vw;
-    text-align: center;
-    font-weight: 100;
-    padding-top: 2vh;
+.behindNavbar {
+    background-color: red;
+    z-index: 999;
 }
- .color {
-    background: #445aaf;
-} 
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #445aaf;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 2vh 1vw;
-    text-decoration: none;
-    font-size: 2vh;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #FFD444;
-    color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #B28C0C;
-    color: white;
-}
-hr {
-    margin-bottom: -2em;
-} %>
 </style>
 <div class="color">
 <html lang="en">
@@ -194,6 +156,7 @@ hr {
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
+    <div class="behindNavbar">
 <div class="topnav" id="myTopnav">
     <a href="/">Home</a>
     <a href="/resume">Resume</a>
@@ -203,5 +166,5 @@ hr {
     <a href="/">Projects</a>
 </div>
 </div>
-<hr>
+</div>
 <%=yield%>
