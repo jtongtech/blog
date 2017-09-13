@@ -48,31 +48,25 @@ H1 {
 </style>
 
 <script>
-
-function PopUp(hideOrshow) {
-    if (hideOrshow == 'hide') document.getElementById('dim_background').style.display = "none";
-    else document.getElementById('dim_background').removeAttribute('style');
-}
-console.log(localStorage.getItem("hasCodeRunBefore"))
-
-window.onload = function () {
+if (localStorage['firstRun'] === 'false') {
+    // The page has been visited before
+} else {
+    // The page has not been visited before
+    // OR
+    // The user or script has cleared the localStorage value
+    function PopUp(hideOrshow) {
+        if (hideOrshow == 'hide') document.getElementById('dim_background').style.display = "none";
+        else document.getElementById('dim_background').removeAttribute('style');
+    }
+    window.onload = function () {
         setTimeout(function () {
             PopUp('show');
         }, 100);
     }
-
-window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
-        alert("fired");
-        window.onload = function () {
-        setTimeout(function () {
-            PopUp('show');
-        }, 100);
-    }
-        localStorage.setItem("hasCodeRunBefore", true);
-        console.log(localStorage.getItem("hasCodeRunBefore"))
-    }
 }
+localStorage['firstRun'] = 'false';
+
+
 </script>
 
 <style>
