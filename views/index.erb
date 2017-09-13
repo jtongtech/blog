@@ -49,15 +49,29 @@ H1 {
 
 <script>
 
-
 function PopUp(hideOrshow) {
     if (hideOrshow == 'hide') document.getElementById('dim_background').style.display = "none";
     else document.getElementById('dim_background').removeAttribute('style');
 }
+console.log(localStorage.getItem("hasCodeRunBefore"))
+
 window.onload = function () {
-    setTimeout(function () {
-        PopUp('show');
-    }, 100);
+        setTimeout(function () {
+            PopUp('show');
+        }, 100);
+    }
+
+window.onload = function () {
+    if (localStorage.getItem("hasCodeRunBefore") === null) {
+        alert("fired");
+        window.onload = function () {
+        setTimeout(function () {
+            PopUp('show');
+        }, 100);
+    }
+        localStorage.setItem("hasCodeRunBefore", true);
+        console.log(localStorage.getItem("hasCodeRunBefore"))
+    }
 }
 </script>
 
