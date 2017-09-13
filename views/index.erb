@@ -68,9 +68,14 @@ if (localStorage['firstRun'] === 'false') {
     // The page has not been visited before
     // OR
     // The user or script has cleared the localStorage value
-    function PopUp(hideOrshow) {
-        if (hideOrshow == 'hide') document.getElementById('dim_background').style.display = "none";
-        else document.getElementById('dim_background').removeAttribute('style');
+    function hideYes() {
+        document.getElementById('dim_background').style.display = "none";
+    }
+    function hideNo() {
+        document.getElementById('dim_background').style.display = "none";
+    }
+    function PopUp(show) {
+        document.getElementById('dim_background').removeAttribute('style');
     }
     window.onload = function () {
         setTimeout(function () {
@@ -80,7 +85,6 @@ if (localStorage['firstRun'] === 'false') {
 }
 localStorage['firstRun'] = 'false';
 
-
 </script>
 
 
@@ -88,7 +92,7 @@ localStorage['firstRun'] = 'false';
     <div id="popup">
         <center>
              <div class="popup">You have been selected to try out new and upcoming features and feel of <a href="www.tongtechnologies.com">this website!</a>  Would you like to test out these new features?<br>
-<input type='button' class="feature_btns" onclick="PopUp('hide')" value="Yes"> <input type='button' class="feature_btns" onclick="PopUp('hide')" value="No"></div>
+<input type='button' id="toggleButton" class="feature_btns" onclick="hideYes()" value="Yes"> <input type='button' id="toggleButton" class="feature_btns" onclick="hideNo()" value="No"></div>
 
         </center>
     </div>
