@@ -27,6 +27,10 @@ get '/icc' do
   erb :icc
 end
 
+get '/toggle' do
+  erb :toggle
+end
+
 not_found do
   status 404
   erb :oops

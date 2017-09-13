@@ -143,6 +143,9 @@ H1 {
     z-index: 999;
 }
 </style>
+
+<% projects_section_enabled = true %>
+
 <div class="color">
 <html lang="en">
 	<head>
@@ -163,7 +166,11 @@ H1 {
     <a href="/blog">Blog</a>
     <a href="mailto:jeremy@tongtechnologies.com">Contact</a>
     <a href="https://github.com/jtongtech">Github</a>
-    <a href="/">Projects</a>
+    
+    <% if projects_section_enabled == true %>
+        <a href="/projects">Projects</a>
+    <%end%>
+    
 </div>
 </div>
 </div>

@@ -28,6 +28,65 @@ H1 {
 
 <body>
 <center>
+<style>
+#dim_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 0, 0, 0.68);
+    z-index: 1001;
+}
+#popup {
+    width: 50vw;
+    height: auto;
+    background: rgba(255, 212, 68, 0.88);
+    border: 5px solid black;
+    border-radius: 0.5em;
+    position: relative;
+    top: 39vh;
+}
+</style>
+
+<script>
+
+
+function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide') document.getElementById('dim_background').style.display = "none";
+    else document.getElementById('dim_background').removeAttribute('style');
+}
+window.onload = function () {
+    setTimeout(function () {
+        PopUp('show');
+    }, 100);
+}
+</script>
+
+<style>
+.popup {
+    margin-top: 3vh;
+    font-size: 2vw;
+    text-align: center;
+    width: 87%;
+}
+.feature_btns {
+    font-size: 2vw;
+    color: gold;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    border-radius: 0.5em;
+    background-color: slategrey;
+    border-color: black;
+}
+</style>
+
+<div id="dim_background" style='display:none'>
+    <div id="popup">
+        <center>
+             <div class="popup">You have been selected to try out new and upcoming features and feel of <a href="www.tongtechnologies.com">this website!</a>  Would you like to test out these new features?<br>
+<input type='button' class="feature_btns" onclick="PopUp('hide')" value="Yes"> <input type='button' class="feature_btns" onclick="PopUp('hide')" value="No"></div>
+
+        </center>
+    </div>
 </center>
 
 <div class="img_position">
