@@ -62,22 +62,32 @@ H1 {
 
 
 <script>
-var toggle = ""
-console.log(toggle)
+
+var x = document.getElementById('projects');
 if (localStorage['firstRun'] === 'false') {
     // The page has been visited before
+    var myData = localStorage.getItem('toggle');
+    if (localStorage['toggle'] === 'false') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
 } else {
     // The page has not been visited before
     // OR
     // The user or script has cleared the localStorage value
     function hideYes() {
         document.getElementById('dim_background').style.display = "none";
-        toggle = true
+        localStorage['toggle'] = 'true';
+        toggle = true;
+        x.style.display = 'block';
         console.log(toggle)
     }
     function hideNo() {
         document.getElementById('dim_background').style.display = "none";
-        toggle = false
+        localStorage['toggle'] = 'false';
+        toggle = false;
+        x.style.display = 'none';
         console.log(toggle)
     }
     function PopUp(show) {
