@@ -4,23 +4,23 @@ enable :sessions
 
 
 get '/' do
-    erb :index
+    erb :index, :layout => :main_layout
 end
 
 get '/resume' do
-  erb :resume
+  erb :resume, :layout => :main_layout
 end
 
 get '/blog' do
-  erb :blog
+  erb :blog, :layout => :main_layout
 end
 
 get '/contact' do
-  erb :contact
+  erb :contact, :layout => :main_layout
 end
 
 get '/projects' do
-  erb :projects
+  erb :projects, :layout => :main_layout
 end
 
 get '/icc' do
@@ -33,6 +33,10 @@ end
 
 get '/drumkit' do
   erb :drumkit
+end
+
+get '/clock' do
+  erb :clock
 end
 
 # not_found do
