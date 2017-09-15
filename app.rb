@@ -31,7 +31,11 @@ get '/toggle' do
   erb :toggle
 end
 
-not_found do
-  status 404
-  erb :oops
+get '/drumkit' do
+  erb :drumkit
 end
+
+# not_found do
+#   status 404
+#   erb :oops
+# end
