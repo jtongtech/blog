@@ -39,6 +39,10 @@ get '/clock' do
   erb :clock
 end
 
+get '/chat' do
+  erb :chat
+end
+
 # not_found do
 #   status 404
 #   erb :oops
