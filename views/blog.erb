@@ -212,6 +212,22 @@ function fizzBuzzArt() {
 <div class="blogSection">
 <div class="cf">
 <div>
+<img class="tree" src="img/seattle.jpg"></div>
+<div>
+<center>
+<H2>12/13/17
+<br>
+What I have been up to</H2></center>
+<br><br>
+<p class="indent">So it has been a little bit since my last blog.  Let me say I have been busy.  I write this from the row 8A on board a flight to Seattle!  I am flying out there with one of the founders of Mined Minds, Jonathan Graham.  We are going to to get our amazing clients ready for their beta testing of the product we coded!  I will try to update later on how things go!  Keep your fingers crossed!</p>
+<center>
+<div id="answerhere" style="width: 50vw; padding-top: 4vh;">
+</div></center>
+</div>
+</div>
+<br><hr><br><br><br>
+<div class="cf">
+<div>
 <iframe src="/clock" class="clock_size"></iframe></div>
 <div>
 <center>
@@ -303,6 +319,35 @@ How I got into Software Development</H2></center>
 <br>
 <hr>
 <br>
-
+<br>
+<H2>Congratulations!  You have reached the bottom of the page.</H2>
+<button id="get-quote">Enjoy a new Ron Swanson Quote</button>
+<p id="quote">Getting quote...</p>
 <br>
 </div>
+<script>
+const quoteButton = document.body.querySelector('#get-quote');
+const quoteOutput = document.body.querySelector('#quote');
+
+function* quoteGenerator() {
+	while (true) {
+		yield fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+    		.then(res => res.json());
+ 	}
+}
+
+const generator = quoteGenerator();
+
+function updateQuote() {
+	quoteButton.disabled = true;
+
+	generator.next().value.then(function (data) {
+		quoteOutput.innerHTML = `"${data[0]}"`;
+		quoteButton.disabled = false;
+	});
+}
+
+quoteButton.onclick = updateQuote;
+
+updateQuote();
+</script>

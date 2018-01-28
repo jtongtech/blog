@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'tilt/erb'
+# require 'rubysl-base64'
 enable :sessions
 
 
@@ -43,7 +44,7 @@ get '/chat' do
   erb :chat
 end
 
-# not_found do
-#   status 404
-#   erb :oops
-# end
+not_found do
+  status 404
+  erb :oops
+end
